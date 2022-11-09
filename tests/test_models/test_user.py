@@ -15,11 +15,12 @@ from sqlalchemy.orm import sessionmaker
 
 
 class TestUser(unittest.TestCase):
-    """Unittests for testing the User class."""
+    """Unittests for testing the User class"""
 
     @classmethod
     def setUpClass(cls):
         """User testing setup.
+
         Temporarily renames any existing file.json.
         Resets FileStorage objects dictionary.
         Creates FileStorage, DBStorage and User instances for testing.
@@ -41,6 +42,7 @@ class TestUser(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """User testing teardown.
+
         Restore original file.json.
         Delete the FileStorage, DBStorage and User test instances.
         """

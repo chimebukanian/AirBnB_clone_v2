@@ -14,6 +14,7 @@ class TestBaseModel(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         """BaseModel testing setup.
+
         Temporarily renames any existing file.json.
         Resets FileStorage objects dictionary.
         Creates a BaseModel instance for testing.
@@ -29,6 +30,7 @@ class TestBaseModel(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """BaseModel testing teardown.
+
         Restore original file.json.
         Delete the test BaseModel instance.
         """
@@ -44,7 +46,7 @@ class TestBaseModel(unittest.TestCase):
         del cls.base
 
     def test_pep8(self):
-        """Test pep8 styling."""
+        """Test pep8 styling"""
         style = pep8.StyleGuide(quiet=True)
         p = style.check_files(["models/base_model.py"])
         self.assertEqual(p.total_errors, 0, "fix pep8")

@@ -16,11 +16,12 @@ from sqlalchemy.orm import sessionmaker
 
 
 class TestState(unittest.TestCase):
-    """Unittests for testing the State class."""
+    """Unittests for testing the State class"""
 
     @classmethod
     def setUpClass(cls):
         """State testing setup.
+
         Temporarily renames any existing file.json.
         Resets FileStorage objects dictionary.
         Creates FileStorage, DBStorage and State instances for testing.
@@ -43,6 +44,7 @@ class TestState(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         """State testing teardown.
+
         Restore original file.json.
         Delete the FileStorage, DBStorage and State test instances.
         """
